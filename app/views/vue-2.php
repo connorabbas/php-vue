@@ -4,7 +4,7 @@
     <div id="app">
         {{ parentHeader.label + " " + parentHeader.globalCount }}
         <hr />
-        <emit-rating-counter :parent="parentHeader" @increment="parentHeader.globalCount+=$event"></emit-rating-counter>
+        <emit-rating-counter :parent="parentHeader" @emitrating="updateRating($event)"></emit-rating-counter>
     </div>
 </div>
 
@@ -21,6 +21,11 @@ include_once 'app/views/vue-components/emit-rating-counter.php';
                 label: "Counter is at: ",
                 globalCount: 0
             }
-        }
+        },
+        methods: {
+            updateRating(eventVal) {
+                this.parentHeader.globalCount += eventVal;
+            }
+        },
     })
 </script>
