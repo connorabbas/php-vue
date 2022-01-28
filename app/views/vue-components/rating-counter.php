@@ -3,16 +3,27 @@ ob_start();
 ?>
 <!-- template -->
 <div>
-    <button @click="$emit('increment', -1);">Thumbs Down</button>
-    <button @click="$emit('increment', 1);">Thumbs Up</button>
+    <h1>{{ title }}</h1>
+    <button @click="count--; parent.globalCount--;">Thumbs Down</button>
+    {{ count }}
+    <button @click="count++; parent.globalCount++;">Thumbs Up</button>
 </div>
 <!-- template end -->
 <?php
-$ratingCounter = ob_get_clean();
+$tester = ob_get_clean();
 ?>
 
 <script>
     Vue.component('rating-counter', {
-        template:   `<?= $ratingCounter ?>`,
+        props: [
+            'title', 
+            'parent',
+        ],
+        data() {
+            return {
+                count: 0
+            }
+        },
+        template:   `<?= $tester ?>`
     })
 </script>

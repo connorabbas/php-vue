@@ -1,14 +1,16 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-<div id="app">
-    {{ parentHeader.label + " " + parentHeader.globalCount }}
-    <hr />
-    <rating-counter :parent="parentHeader" @increment="parentHeader.globalCount+=$event"></rating-counter>
+<div class="container">
+    <div id="app">
+        {{ parentHeader.label + " " + parentHeader.globalCount }}
+        <hr />
+        <emit-rating-counter :parent="parentHeader" @increment="parentHeader.globalCount+=$event"></emit-rating-counter>
+    </div>
 </div>
 
 <?php
 // Vue components from php
-include_once 'app/views/vue-components/rating-counter.php';
+include_once 'app/views/vue-components/emit-rating-counter.php';
 ?>
 
 <script>

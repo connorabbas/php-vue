@@ -13,7 +13,7 @@
 
 <?php
 // Vue components from php
-include_once 'app/views/vue-components/tester.php';
+include_once 'app/views/vue-components/rating-counter.php';
 ?>
 
 <script>
