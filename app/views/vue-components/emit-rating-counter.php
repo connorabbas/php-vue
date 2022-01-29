@@ -3,8 +3,8 @@ ob_start();
 ?>
 <!-- template -->
 <div>
-    <button @click="$emit('emitrating', -1);">Thumbs Down</button>
-    <button @click="$emit('emitrating', 1);">Thumbs Up</button>
+    <button @click="$emit('emitrating', -1);" class="btn btn-dark me-2">Thumbs Down</button>
+    <button @click="$emit('emitrating', 1);" class="btn btn-dark">Thumbs Up</button>
 </div>
 <!-- template end -->
 <?php

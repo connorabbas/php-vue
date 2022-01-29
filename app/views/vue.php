@@ -1,12 +1,11 @@
 <!-- Main template -->
-<div class="container">
+<div class="container my-5">
     <div id="app">
-    {{ parentHeader.label }}
-    {{ parentHeader.globalCount }}
-    <hr />
-    <rating-counter title="Rating 1" :parent="parentHeader"></rating-counter>
-    <rating-counter title="Rating 2" :parent="parentHeader"></rating-counter>
-    <rating-counter title="Rating 3" :parent="parentHeader"></rating-counter>
+        <p class="mb-3">{{ parentHeader.label }}: {{ parentHeader.globalCount }}</p>
+        <hr />
+        <rating-counter title="Rating 1" :parent="parentHeader"></rating-counter>
+        <rating-counter title="Rating 2" :parent="parentHeader"></rating-counter>
+        <rating-counter title="Rating 3" :parent="parentHeader"></rating-counter>
     </div>
 </div>
 
@@ -19,7 +18,7 @@
         data() {
             return {
                 parentHeader: {
-                    label: "Counter is at: ",
+                    label: "Global counter is at: ",
                     globalCount: 0
                 }
             }

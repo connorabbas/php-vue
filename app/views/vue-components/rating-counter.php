@@ -2,11 +2,11 @@
 ob_start();
 ?>
 <!-- template -->
-<div>
-    <h1>{{ title }}</h1>
-    <button @click="count--; parent.globalCount--;">Thumbs Down</button>
-    {{ count }}
-    <button @click="count++; parent.globalCount++;">Thumbs Up</button>
+<div class="my-5">
+    <h1 class="mb-3">{{ title }}</h1>
+    <p class="mb-4">Amount: {{ count }}</p>
+    <button @click="count--; parent.globalCount--;" class="btn btn-dark me-2">Thumbs Down</button>
+    <button @click="count++; parent.globalCount++;" class="btn btn-dark">Thumbs Up</button>
 </div>
 <!-- template end -->
 <?php

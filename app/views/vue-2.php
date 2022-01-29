@@ -1,7 +1,7 @@
 <!-- Main template -->
-<div class="container">
+<div class="container my-5">
     <div id="app">
-        {{ parentHeader.label + " " + parentHeader.globalCount }}
+        <p class="mb-3">{{ parentHeader.label + " " + parentHeader.globalCount }}</p>
         <hr />
         <emit-rating-counter :parent="parentHeader" @emitrating="updateRating($event)"></emit-rating-counter>
     </div>
