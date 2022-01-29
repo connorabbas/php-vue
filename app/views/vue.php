@@ -15,7 +15,7 @@
 
 <!-- App -->
 <script>
-    const app =  Vue.createApp({
+    const app = Vue.createApp({
         data() {
             return {
                 parentHeader: {
