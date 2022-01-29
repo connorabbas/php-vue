@@ -12,7 +12,7 @@ $ratingCounter = ob_get_clean();
 ?>
 
 <script>
-    Vue.component('emit-rating-counter', {
+    app.component('emit-rating-counter', {
         template:   `<?= $ratingCounter ?>`,
     })
 </script>

@@ -14,7 +14,7 @@ $tester = ob_get_clean();
 ?>
 
 <script>
-    Vue.component('rating-counter', {
+    app.component('rating-counter', {
         props: [
             'title', 
             'parent',

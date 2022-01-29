@@ -1,5 +1,7 @@
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- Latest Vue CDN -->
+<script src="https://unpkg.com/vue@next"></script>
 
+<!-- Main template -->
 <div class="container">
     <div id="app">
         {{ parentHeader.label + " " + parentHeader.globalCount }}
@@ -8,18 +10,15 @@
     </div>
 </div>
 
-<?php
-// Vue components from php
-include_once 'app/views/vue-components/emit-rating-counter.php';
-?>
-
+<!-- App -->
 <script>
-    new Vue({
-        el: '#app',
-        data: {
-            parentHeader: {
-                label: "Counter is at: ",
-                globalCount: 0
+    const app =  Vue.createApp({
+        data() {
+            return {
+                parentHeader: {
+                    label: "Counter is at: ",
+                    globalCount: 0
+                }
             }
         },
         methods: {
@@ -27,5 +26,14 @@ include_once 'app/views/vue-components/emit-rating-counter.php';
                 this.parentHeader.globalCount += eventVal;
             }
         },
-    })
+    });
+</script>
+
+<!-- Vue components from php (since we are using CDN version) -->
+<?php
+include_once 'app/views/vue-components/emit-rating-counter.php';?>
+
+<!-- Mount -->
+<script>
+    app.mount('#app');
 </script>
