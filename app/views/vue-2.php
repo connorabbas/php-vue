@@ -1,6 +1,3 @@
-<!-- Latest Vue CDN -->
-<script src="https://unpkg.com/vue@next"></script>
-
 <!-- Main template -->
 <div class="container">
     <div id="app">
@@ -9,6 +6,9 @@
         <emit-rating-counter :parent="parentHeader" @emitrating="updateRating($event)"></emit-rating-counter>
     </div>
 </div>
+
+<!-- Latest Vue CDN -->
+<script src="https://unpkg.com/vue@next"></script>
 
 <!-- App -->
 <script>

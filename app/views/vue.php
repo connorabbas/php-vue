@@ -1,6 +1,3 @@
-<!-- Latest Vue CDN -->
-<script src="https://unpkg.com/vue@next"></script>
-
 <!-- Main template -->
 <div class="container">
     <div id="app">
@@ -12,6 +9,9 @@
     <rating-counter title="Rating 3" :parent="parentHeader"></rating-counter>
     </div>
 </div>
+
+<!-- Latest Vue CDN -->
+<script src="https://unpkg.com/vue@next"></script>
 
 <!-- App -->
 <script>
