@@ -1,6 +1,7 @@
 <!-- Main template -->
 <div class="container my-5">
     <div id="app">
+        <h2 class="mb-4">Counter emitting to parent component</h2>
         <p class="mb-3">{{ parentHeader.label + " " + parentHeader.globalCount }}</p>
         <hr />
         <emit-rating-counter :parent="parentHeader" @emitrating="updateRating($event)"></emit-rating-counter>

@@ -39,7 +39,8 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" aria-current="page" href="<?= App::path('/') ?>">Home</a>
-                        <a class="nav-link" href="<?= App::path('/tester') ?>">Tester Page</a>
+                        <a class="nav-link" href="<?= App::path('/vue') ?>">Tester 1</a>
+                        <a class="nav-link" href="<?= App::path('/vue-2') ?>">Tester 2</a>
                     </div>
                 </div>
             </div>
