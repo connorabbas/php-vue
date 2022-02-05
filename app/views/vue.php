@@ -12,9 +12,17 @@
 <!-- Latest Vue CDN -->
 <script src="https://unpkg.com/vue@next"></script>
 
+<!-- Vue components from php (since we are using CDN version) -->
+<?php
+include_once 'app/views/vue-components/rating-counter.php';
+?>
+
 <!-- App -->
 <script>
     const app = Vue.createApp({
+        components: {
+            'rating-counter': RatingCounter,
+        },
         data() {
             return {
                 parentHeader: {
@@ -24,14 +32,5 @@
             }
         }
     });
-</script>
-
-<!-- Vue components from php (since we are using CDN version) -->
-<?php
-include_once 'app/views/vue-components/rating-counter.php';
-?>
-
-<!-- Mount -->
-<script>
     app.mount('#app');
 </script>

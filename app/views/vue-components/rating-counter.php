@@ -14,7 +14,7 @@ $tester = ob_get_clean();
 ?>
 
 <script>
-    app.component('rating-counter', {
+    const RatingCounter = {
         props: [
             'title', 
             'parent',
@@ -25,5 +25,5 @@ $tester = ob_get_clean();
             }
         },
         template:   `<?= $tester ?>`
-    })
+    }
 </script>
